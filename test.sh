@@ -17,3 +17,8 @@ useradd -m test
 /usr/sbin/useradd -m test
 /usr/sbin/userdel -r test
 ls -al /home/test
+groupadd shared
+usermod -G shared test
+ls -al
+mkdir test
+touch myfile
