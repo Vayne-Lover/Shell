@@ -12,4 +12,8 @@ echo $PATH
 PATH=$PATH:/Users
 mytest=(1 2 3 4 5)
 echo ${mytest[2]}
-echo ${mytest[*]}
+echo ${mytest[*]
+useradd -m test
+/usr/sbin/useradd -m test
+/usr/sbin/userdel -r test
+ls -al /home/test
