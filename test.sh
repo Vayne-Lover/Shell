@@ -22,3 +22,9 @@ usermod -G shared test
 ls -al
 mkdir test
 touch myfile
+umask
+umask 0022
+chmod 777 myfile
+chmod g+wx myfile1
+chown test.test myfile
+chgrp vayne-lover myfile
