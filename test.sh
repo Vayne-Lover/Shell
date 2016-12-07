@@ -28,3 +28,7 @@ chmod 777 myfile
 chmod g+wx myfile1
 chown test.test myfile
 chgrp vayne-lover myfile
+ls -l /dev/sd*
+sudo fdisk /dev/sda
+p
+w
