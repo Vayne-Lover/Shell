@@ -32,3 +32,4 @@ ls -l /dev/sd*
 sudo fdisk /dev/sda
 p
 w
+
