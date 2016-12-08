@@ -32,4 +32,11 @@ ls -l /dev/sd*
 sudo fdisk /dev/sda
 p
 w
-
+date>test6
+who>>test6
+wc<test6
+wc<EOF
+safn 
+f kd 
+sd  fsa 
+EOF
