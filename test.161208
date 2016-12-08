@@ -1,0 +1,10 @@
+date>test6
+who>>test6
+wc<test6
+wc<EOF
+safn 
+f kd 
+sd  fsa 
+EOF
+cat test.sh|head
+cat test.sh|tail>test.`date +%y%m%d`

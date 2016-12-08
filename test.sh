@@ -40,3 +40,5 @@ safn
 f kd 
 sd  fsa 
 EOF
+cat test.sh|head
+cat test.sh|tail>test.`date +%y%m%d`
