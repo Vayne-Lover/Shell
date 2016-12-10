@@ -42,3 +42,7 @@ sd  fsa
 EOF
 cat test.sh|head
 cat test.sh|tail>test.`date +%y%m%d`
+bc
+bc -q
+14*5.3
+quit

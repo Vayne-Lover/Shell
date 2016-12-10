@@ -9,3 +9,5 @@ c=$[1+2]
 echo $c
 d=$[3*4]
 echo $d
+e=$(echo 'scale=4;6*3.1'|bc)
+echo $e
