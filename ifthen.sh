@@ -22,9 +22,25 @@
 #else
 #    echo "Don't have."
 #fi
-if [ -r ~/Desktop/CS/Shell/ifthen.sh ]
+#if [ -r ~/Desktop/CS/Shell/ifthen.sh ] && [ -d ~/Desktop/CS/Shell ]
+#then 
+#    echo "Can read it."
+#else
+#    echo "Can't read it."
+#fi
+#a=10
+#if (( $a**100 ))
+#then 
+#    echo ">"
+#elif (( $a**2==100 ))
+#then 
+#    echo "="
+#else 
+#    echo "<"
+#fi
+if [[ "ssda"==s* ]]
 then 
-    echo "Can read it."
-else
-    echo "Can't read it."
+    echo "Hi."
+else 
+    echo "Bye."
 fi
