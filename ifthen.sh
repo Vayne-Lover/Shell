@@ -38,9 +38,18 @@
 #else 
 #    echo "<"
 #fi
-if [[ "ssda"==s* ]]
-then 
-    echo "Hi."
-else 
-    echo "Bye."
-fi
+#if [[ "ssda"==s* ]]
+#then 
+#    echo "Hi."
+#else 
+#    echo "Bye."
+#fi
+a="Vayne"
+case $a in
+Vayne | dasd)
+    echo "Welcome.";;
+BB)
+    echo "BB.";;
+*)
+    echo "Sorry.";;
+esac
