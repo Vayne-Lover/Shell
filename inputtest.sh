@@ -37,12 +37,22 @@
 #  count=$[ $count + 1 ]
 #done
 #
-count=1
-echo $#
+#count=1
+#echo $#
+#while [ -n "$1" ]
+#do
+#  echo "Count $count,$1"
+#  count=$[ $count+1 ]
+#  shift
+#done
+#echo $#
 while [ -n "$1" ]
 do
-  echo "Count $count,$1"
-  count=$[ $count+1 ]
+  case "$1" in 
+    a) echo "a";;
+    b) echo "b";;
+    c) echo "c";;
+    *) echo "Not in list.";;
+  esac
   shift
 done
-echo $#
