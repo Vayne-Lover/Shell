@@ -45,14 +45,33 @@
 #  count=$[ $count+1 ]
 #  shift
 #done
-#echo $#
+#echo
+#while [ -n "$1" ]
+#do
+#  case "$1" in 
+#    a) echo "a";;
+#    b) echo "b";;
+#    c) echo "c";;
+#    *) echo "Not in list.";;
+#  esac
+#  shift
+#done
 while [ -n "$1" ]
 do
-  case "$1" in 
-    a) echo "a";;
-    b) echo "b";;
-    c) echo "c";;
-    *) echo "Not in list.";;
+  case "$1" in
+    -a) echo "a";;
+    -b) var="$2"
+        echo "b,var=$2"
+        shift;;
+    --) shift
+	break;;
+    *)  echo "Not in the list.";;
   esac
   shift
+done
+count=1
+for i in "$@"
+do
+  echo "Count=$count,$@"
+  count=$[ $count+1 ]
 done
