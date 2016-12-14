@@ -21,6 +21,19 @@
 #    echo $[ 2*4 ]
 #fi
 #echo $#
-i=$#
-echo ${!#}
-echo $i
+#i=$#
+#echo ${!#}
+#echo $i
+count=1
+for i in "$*"
+do 
+  echo "Count $count = $i"
+  count=$[ $count + 1 ]
+done
+count=1
+for i in "$@"
+do
+  echo "Count $count = $i"
+  count=$[ $count + 1 ]
+done
+
