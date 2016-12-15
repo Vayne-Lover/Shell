@@ -56,22 +56,42 @@
 #  esac
 #  shift
 #done
-while [ -n "$1" ]
-do
-  case "$1" in
-    -a) echo "a";;
-    -b) var="$2"
-        echo "b,var=$2"
-        shift;;
-    --) shift
-	break;;
-    *)  echo "Not in the list.";;
+#set -- $(getopt ab:cd "$@")
+#while [ -n "$1" ]
+#do
+#  case "$1" in
+#    -a) echo "a";;
+#    -b) var="$2"
+#        echo "b,var=$2"
+#        shift;;
+#    -c) echo "c";;
+#    --) shift
+#	break;;
+#    *)  echo "Not in the list.";;
+#  esac
+#  shift
+#done
+#echo
+#count=1
+#for i in "$@"
+#do
+#  echo "Count=$count,$@"
+#  count=$[ $count+1 ]
+#done
+while getopts :ab:cd opt
+do 
+  case "$opt" in
+    a) echo "a";;
+    b) echo "b,with $OPTARG";;
+    c) echo "c";;
+    d) echo "d";;
   esac
-  shift
 done
+echo $OPTIND   
+shift $[ $OPTIND-1 ]
 count=1
 for i in "$@"
-do
-  echo "Count=$count,$@"
+do 
+  echo "$count,$i"
   count=$[ $count+1 ]
 done
