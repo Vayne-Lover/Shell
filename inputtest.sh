@@ -85,9 +85,10 @@ do
     b) echo "b,with $OPTARG";;
     c) echo "c";;
     d) echo "d";;
+    *) echo "Unknown";;
   esac
 done
-echo $OPTIND   
+#echo $OPTIND   
 shift $[ $OPTIND-1 ]
 count=1
 for i in "$@"
